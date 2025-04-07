@@ -67,7 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
         precio: precioUnitario,
         cantidad: cantidad,
         imagen: new URL(producto.imagen, window.location.origin).href
-
       });
     }
 
@@ -75,5 +74,23 @@ document.addEventListener("DOMContentLoaded", () => {
     cantidad = 1;
     contador.textContent = cantidad;
     actualizarPrecio();
+  });
+
+  // 👉 Selección de talla
+  const botonesTalla = document.querySelectorAll(".tallas button");
+  botonesTalla.forEach(btn => {
+    btn.addEventListener("click", () => {
+      botonesTalla.forEach(b => b.classList.remove("activo"));
+      btn.classList.add("activo");
+    });
+  });
+
+  // 👉 Selección de color
+  const colores = document.querySelectorAll(".color-option");
+  colores.forEach(color => {
+    color.addEventListener("click", () => {
+      colores.forEach(c => c.classList.remove("activo"));
+      color.classList.add("activo");
+    });
   });
 });
