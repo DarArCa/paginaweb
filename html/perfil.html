@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfil</title>
+  <link rel="stylesheet" href="../css/estilos.css" />
+</head>
+<body>
+  <div class="contenedor-padre">
+    <div class="banner-superior">Perfil de Usuario</div>
+
+    <div class="encabezado">
+      <div class="usuario">
+        <h2 id="nombre-usuario">Tu Nombre</h2>
+        <img id="imagen-perfil" src="../img/perfil.png" alt="Perfil" />
+      </div>
+    </div>
+
+    <div class="formulario-perfil">
+      <label for="input-nombre">Nombre:</label>
+      <input type="text" id="input-nombre" placeholder="Tu nombre" />
+
+      <label for="input-correo">Correo electrónico:</label>
+      <input type="email" id="input-correo" placeholder="correo@ejemplo.com" />
+
+      <label for="input-telefono">Teléfono:</label>
+      <input type="tel" id="input-telefono" placeholder="1234567890" />
+
+      <label for="input-direccion">Dirección:</label>
+      <input type="text" id="input-direccion" placeholder="Tu dirección" />
+
+      <label for="input-ciudad">Ciudad:</label>
+      <input type="text" id="input-ciudad" placeholder="Tu ciudad" />
+
+      <label for="input-imagen">Imagen de perfil:</label>
+      <input type="file" id="input-imagen" accept="image/*" />
+
+      <button id="guardar-perfil">Guardar</button>
+    </div>
+  </div>
+
+  <!-- Barra flotante -->
+  <div class="barra-superior">
+    <span onclick="window.location.href='../index.html'">🏠</span>
+    <span onclick="window.location.href='../html/carrito.html'">🛒</span>
+    <span onclick="window.location.href='../html/favoritos.html'">❤️</span>
+    <span onclick="window.location.href='../html/perfil.html'">👤</span>
+  </div>
+
+  <script src="../js/perfil.js"></script>
+</body>
+</html>

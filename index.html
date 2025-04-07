@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tienda de Ropa</title>
+  <link rel="stylesheet" href="/css/estilos.css" />
+  
+</head>
+<body>
+
+  <div class="contenedor-padre"> <!-- 🔴 Contenedor ROJO -->
+
+    <!-- 🟠 Contenedor NARANJA -->
+    <div class="encabezado">
+      <p>Hello, Welcome 👋</p>
+      <div class="usuario">
+        <h2>Albert Stevano</h2>
+        <img src="user.png" alt="Foto de perfil">
+      </div>
+      <div class="busqueda">
+        <input type="text" placeholder="Search clothes...">
+        <button>⚙️</button>
+      </div>
+    </div>
+
+    <!-- 🔵 Contenedor AZUL -->
+    <div class="filtros">
+      <button class="activo" data-filtro="all">All Items</button>
+      <button data-filtro="dress">Dress</button>
+      <button data-filtro="tshirt">T-Shirt</button>
+    </div>
+    
+    <div class="barra-superior">
+      <a href="../index.html">🏠</a>
+      <a href="/html/carrito.html">🛒</a>
+        <a href="/html/favoritos.html">❤️</a>
+        <a href="/html/perfil.html">👤</a>
+      </div>
+      
+    <!-- 🟣 Contenedor MORADO -->
+    <div class="productos">
+
+      <!-- 10 productos -->
+      <div class="producto" data-categoria="tshirt">
+        <img src="https://th.bing.com/th/id/OIP.q3NBWPx_nnNWeb0_qEPBugHaKl?rs=1&pid=ImgDetMain" alt="Modern Light Clothes">
+        <div class="info">
+          <h3>Modern Light Clothes</h3>
+          <p>T-Shirt</p>
+          <div class="precio-rating">
+            <span>$212.99</span><span>⭐ 5.0</span>
+          </div>
+        </div>
+        <div class="icono-corazon">❤️</div>
+      </div>
+
+      <div class="producto" data-categoria="dress">
+        <img src="https://th.bing.com/th/id/OIP.Wm2C4nMYZ0vnkSGUz86g7wHaLG?rs=1&pid=ImgDetMain" alt="Light Dress Bless">
+        <div class="info">
+          <h3>Light Dress Bless</h3>
+          <p>Dress modern</p>
+          <div class="precio-rating">
+            <span>$162.99</span><span>⭐ 5.0</span>
+          </div>
+        </div>
+        <div class="icono-corazon">❤️</div>
+      </div>
+
+      <div class="producto" data-categoria="tshirt">
+        <img src="https://th.bing.com/th?id=OIF.C%2fNZn6Z%2bXZQMoeoPwGoU%2fA&rs=1&pid=ImgDetMain" alt="Urban Outfit">
+        <div class="info">
+          <h3>Urban Outfit</h3>
+          <p>T-Shirt</p>
+          <div class="precio-rating">
+            <span>$89.99</span><span>⭐ 4.8</span>
+          </div>
+        </div>
+        <div class="icono-corazon">❤️</div>
+      </div>
+
+      <div class="producto" data-categoria="dress">
+        <img src="https://th.bing.com/th/id/OIP.1LzkeiCL26HvB_Eg3L377QHaFx?rs=1&pid=ImgDetMain" alt="Elegant Dress">
+        <div class="info">
+          <h3>Elegant Dress</h3>
+          <p>Dress</p>
+          <div class="precio-rating">
+            <span>$189.00</span><span>⭐ 5.0</span>
+          </div>
+        </div>
+        <div class="icono-corazon">❤️</div>
+      </div>
+
+      <div class="producto" data-categoria="tshirt">
+        <img src="https://i.pinimg.com/originals/4f/b0/61/4fb061d75ecafb430f887e295b09a05b.jpg" alt="Summer Vibes">
+        <div class="info">
+          <h3>Summer Vibes</h3>
+          <p>T-Shirt</p>
+          <div class="precio-rating">
+            <span>$75.00</span><span>⭐ 4.5</span>
+          </div>
+        </div>
+        <div class="icono-corazon">❤️</div>
+      </div>
+
+      <div class="producto" data-categoria="dress">
+        <img src="https://th.bing.com/th/id/OIP.bJreUxnntWlaQb6qRZIbKAAAAA?rs=1&pid=ImgDetMain" alt="Casual Look">
+        <div class="info">
+          <h3>Casual Look</h3>
+          <p>Dress</p>
+          <div class="precio-rating">
+            <span>$95.50</span><span>⭐ 4.9</span>
+          </div>
+        </div>
+        <div class="icono-corazon">❤️</div>
+      </div>
+
+      <div class="producto" data-categoria="tshirt">
+        <img src="https://th.bing.com/th/id/OIP.MHKdWfhMhK2jD0VXgcIrPQHaJ3?rs=1&pid=ImgDetMain" alt="Denim Style">
+        <div class="info">
+          <h3>Denim Style</h3>
+          <p>T-Shirt</p>
+          <div class="precio-rating">
+            <span>$99.90</span><span>⭐ 4.7</span>
+          </div>
+        </div>
+        <div class="icono-corazon">❤️</div>
+      </div>
+
+      <div class="producto" data-categoria="dress">
+        <img src="https://th.bing.com/th/id/OIP.Ey1I2BmMbT11zGDvH_GeCgHaLF?rs=1&pid=ImgDetMain" alt="Night Elegance">
+        <div class="info">
+          <h3>Night Elegance</h3>
+          <p>Dress</p>
+          <div class="precio-rating">
+            <span>$210.00</span><span>⭐ 5.0</span>
+          </div>
+        </div>
+        <div class="icono-corazon">❤️</div>
+      </div>
+
+      <div class="producto" data-categoria="tshirt">
+        <img src="https://th.bing.com/th/id/OIP.2B0cLNnV70FuhLXUR4ds5QHaE8?rs=1&pid=ImgDetMain" alt="Comfy Fit">
+        <div class="info">
+          <h3>Comfy Fit</h3>
+          <p>T-Shirt</p>
+          <div class="precio-rating">
+            <span>$49.99</span><span>⭐ 4.2</span>
+          </div>
+        </div>
+        <div class="icono-corazon">❤️</div>
+      </div>
+
+      <div class="producto" data-categoria="dress">
+        <img src="https://img.freepik.com/foto-gratis/foto-moda-mujer-rubia-estilo-joven-caminando-calle-vestida-ropa-moda-sosteniendo-bolsas-compra-hablando-telefono_496169-2058.jpg" alt="Classic Vibes">
+        <div class="info">
+          <h3>Classic Vibes</h3>
+          <p>Dress</p>
+          <div class="precio-rating">
+            <span>$132.00</span><span>⭐ 4.8</span>
+          </div>
+        </div>
+        <div class="icono-corazon">❤️</div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="/js/sccript.js"></script>
+
+
+  <script src="/js/busqueda.js"></script> <!-- o ./js/busqueda.js según la ruta -->
+
+  <script src="/js/sccript.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const nombre = localStorage.getItem("nombreUsuario");
+      const imagen = localStorage.getItem("imagenUsuario");
+
+      if (nombre) {
+        const h2 = document.querySelector(".usuario h2");
+        if (h2) h2.textContent = nombre;
+      }
+
+      if (imagen) {
+        const img = document.querySelector(".usuario img");
+        if (img) img.src = imagen;
+      }
+    });
+  </script>
+</body>
+
+</body>
+</html>

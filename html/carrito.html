@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrito</title>
+  <link rel="stylesheet" href="../css/estilos.css"/>
+  <script src="https://kit.fontawesome.com/a2e0e6ad4d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="contenedor-padre">
+    <div class="banner-superior">Tu Carrito</div>
+
+    <div id="contenedor-carrito" class="productos">
+      <!-- Los productos del carrito se cargarán aquí -->
+    </div>
+  </div>
+
+  <!-- ✅ Ventana de verificación -->
+  <div id="ventana-compra">
+    <div class="ventana-contenido">
+      <span class="ventana-cerrar" onclick="cerrarVentanaCompra()">✖</span>
+      <h2>Verifique sus datos</h2>
+      <div id="datos-perfil"></div>
+      <button id="total-compra" disabled style="background-color: #eee; color: #333; font-weight: bold; margin-bottom: 0.5rem;">Total: $0</button>
+      <button class="btn-finalizar">Finalizar compra</button>
+    </div>
+  </div>
+
+  <!-- 🔲 Barra flotante inferior con emojis -->
+  <div class="barra-superior">
+    <span onclick="window.location.href='../index.html'">🏠</span>
+    <span onclick="window.location.href='../html/favoritos.html'">❤️</span>
+    <span onclick="abrirVentanaCompra()">✅</span>
+    <span onclick="window.location.href='../html/perfil.html'">👤</span>
+  </div>
+
+  <script src="../js/carrito.js"></script>
+  <!-- ✅ Mensaje de compra exitosa -->
+<div id="mensaje-exito">
+  ✅ ¡Compra exitosa!
+</div>
+</body>
+</html>

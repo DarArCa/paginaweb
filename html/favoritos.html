@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Favoritos</title>
+  <link rel="stylesheet" href="/css/estilos.css" />
+</head>
+<body>
+
+  <div class="contenedor-padre">
+    <!-- Encabezado -->
+    <div class="encabezado">
+      <p>Hello, Welcome 👋</p>
+      <div class="usuario">
+        <h2>Albert Stevano</h2>
+        <img src="user.png" alt="Foto de perfil">
+      </div>
+      <div class="busqueda">
+        <input type="text" placeholder="Search clothes...">
+        <button>⚙️</button>
+      </div>
+    </div>
+
+    <!-- Menú superior -->
+    <div class="barra-superior">
+      <a href="../index.html">🏠</a>
+      <a href="carrito.html">🛒</a>
+      <a href="favoritos.html">❤️</a>
+      <a href="perfil.html">👤</a>
+    </div>
+
+    <!-- Productos favoritos -->
+    <div class="productos" id="favoritos-contenedor">
+      <!-- Aquí se cargan los productos desde favoritos.js -->
+    </div>
+
+  </div>
+
+  <script src="/js/favoritos.js"></script>
+  <script src="../js/busqueda.js"></script> <!-- o ./js/busqueda.js según la ruta -->
+
+
+  <script src="../js/sccript.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const nombre = localStorage.getItem("nombreUsuario");
+      const imagen = localStorage.getItem("imagenUsuario");
+
+      if (nombre) {
+        const h2 = document.querySelector(".usuario h2");
+        if (h2) h2.textContent = nombre;
+      }
+
+      if (imagen) {
+        const img = document.querySelector(".usuario img");
+        if (img) img.src = imagen;
+      }
+    });
+  </script>
+</body>
+
+</body>
+</html>
