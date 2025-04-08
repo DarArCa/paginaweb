@@ -1,0 +1,611 @@
+/* 
+📌 RESET GENERAL
+- Se eliminan márgenes y rellenos por defecto.
+- Se usa 'box-sizing: border-box' para controlar el tamaño total de los elementos.
+- Se aplica fuente sans-serif a todo el sitio.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}  
+
+/* 
+📌 BODY
+- Fondo gris claro (#f8f8f8) para contraste con los contenedores blancos.
+- Padding interno para separación respecto al borde de la pantalla.
+*/
+body {
+  background: #f8f8f8;
+  padding: 10px;
+}
+
+/* 
+📌 CONTENEDOR PRINCIPAL
+- Ancho máximo de 450px para diseño centrado tipo móvil.
+- Fondo blanco con bordes redondeados y borde blanco.
+- Centrado automáticamente con margin: auto.
+- Padding interno y posición relativa para elementos flotantes como íconos.
+*/
+.contenedor-padre {
+  max-width: 450px;
+  margin: auto;
+  background: white;
+  border: 2px solid rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 12px;
+  position: relative;
+}
+
+/* 
+📌 BANNER SUPERIOR
+- Fondo morado (purple).
+- Texto blanco, centrado y en negrita.
+- Padding para espacio interno y bordes redondeados.
+*/
+.banner-superior {
+  background: purple;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* 
+📌 ENCABEZADO
+- Contenedor con borde blanco y padding para separación.
+- Sección superior que incluye imagen de usuario y barra de búsqueda.
+*/
+.encabezado {
+  border: 2px solid rgb(255, 255, 255);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* 
+📌 USUARIO (HEADER)
+- Flexbox para alinear horizontalmente la imagen de perfil y texto.
+- Centrado vertical y espacio entre los elementos.
+*/
+.usuario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 
+📌 IMAGEN DEL USUARIO
+- Tamaño fijo de 40x40px.
+- Bordes redondeados al 100% para que sea circular.
+*/
+.usuario img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* 
+📌 BARRA DE BÚSQUEDA
+- Flexbox para poner input y botón en línea.
+- Margen superior para separación visual del usuario.
+*/
+.busqueda {
+  display: flex;
+  margin-top: 10px;
+}
+
+/* 
+📌 INPUT DE BÚSQUEDA
+- Se expande con flex: 1.
+- Padding interno para comodidad al escribir.
+- Bordes redondeados en la izquierda.
+*/
+.busqueda input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid #ccc;
+}
+
+/* 
+📌 BOTÓN DE BÚSQUEDA
+- Padding para tamaño cómodo.
+- Color de fondo gris claro.
+- Bordes redondeados en la derecha.
+*/
+.busqueda button {
+  padding: 8px;
+  border-radius: 0 10px 10px 0;
+  background: #ddd;
+  border: 1px solid #ccc;
+}
+
+/* 
+📌 FILTROS DE CATEGORÍA
+- Contenedor con borde blanco y padding.
+- Distribución equitativa de botones con espacio entre ellos.
+*/
+.filtros {
+  border: 2px solid rgb(255, 255, 255);
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+/* 
+📌 BOTONES DE FILTRO
+- Padding interno para dar tamaño.
+- Color de fondo gris claro.
+- Bordes redondeados estilo píldora.
+- Cursor en forma de mano.
+*/
+.filtros button {
+  padding: 8px 16px;
+  border: none;
+  background: #eee;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* 
+📌 BOTÓN ACTIVO
+- Fondo negro y texto blanco para destacar la categoría seleccionada.
+*/
+.filtros .activo {
+  background: black;
+  color: white;
+}
+
+/* 
+📌 CONTENEDOR DE PRODUCTOS
+- Display grid de 2 columnas.
+- Espaciado entre productos (gap).
+*/
+.productos {
+  border: 2px solid rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* 
+📌 TARJETA DE PRODUCTO
+- Fondo blanco con bordes redondeados.
+- Padding interno y posición relativa para íconos flotantes.
+*/
+.producto {
+  background: #fff;
+  border-radius: 10px;
+  padding: 5px;
+  position: relative;
+}
+
+/* 
+📌 IMAGEN DEL PRODUCTO
+- Tamaño adaptable al ancho del contenedor.
+- Altura máxima de 200px.
+- Se ajusta sin deformar usando object-fit: contain.
+- Fondo gris claro para destacar la imagen.
+*/
+.producto img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+}
+
+/* 
+📌 INFORMACIÓN DEL PRODUCTO
+- Padding para separar del borde de la tarjeta.
+*/
+.info {
+  padding: 5px;
+}
+
+/* 
+📌 PRECIO Y RATING
+- Se colocan en una fila con espacio entre ellos.
+*/
+.precio-rating {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 
+📌 ÍCONO DE CORAZÓN (FAVORITO)
+- Posicionado en la esquina superior derecha del producto.
+- Fondo blanco y forma circular.
+- Padding para hacerlo visualmente atractivo.
+*/
+.icono-corazon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: white;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+/* 
+📌 BARRA INFERIOR FLOTANTE
+- Posicionada fija cerca de la parte inferior de la pantalla.
+- Fondo negro, bordes redondeados y sombra para elevarlo visualmente.
+- Contiene íconos con espacio entre ellos.
+- Centrado horizontal con transform.
+*/
+.barra-superior {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000000;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  gap: 20px;
+  z-index: 1000;
+}
+
+/* 
+📌 ÍCONOS DE LA BARRA
+- Tamaño grande (24px) y cursor de mano para interacción.
+*/
+.barra-superior span {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* 
+📌 ANIMACIÓN AL PASAR EL MOUSE POR UNA IMAGEN
+- Efecto de escala (zoom suave) cuando el cursor pasa por encima.
+*/
+.producto img {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.producto img:hover {
+  transform: scale(1.05);
+}
+
+/* 
+📌 CONTENEDOR DE IMAGEN EN DETALLE DEL PRODUCTO
+- Máximo alto de 400px y ancho completo.
+- Bordes inferiores redondeados.
+*/
+.detalle-img-container {
+  position: relative;
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+/* 
+📌 IMAGEN EN DETALLE
+- Escala proporcional, centrada y ajustada sin distorsión.
+*/
+.detalle-img-container img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+  border-radius: inherit;
+}
+
+/* 
+📌 BOTONES DE VOLVER Y FAVORITO
+- Flotantes dentro del contenedor de imagen.
+- Forma circular, fondo blanco y sin borde.
+- Posicionados arriba a la izquierda y derecha.
+*/
+.btn-volver, .btn-fav {
+  position: absolute;
+  top: 1rem;
+  background: white;
+  border-radius: 50%;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.btn-volver {
+  left: 1rem;
+}
+
+.btn-fav {
+  right: 1rem;
+}
+
+/* 
+📌 CONTENIDO DEL DETALLE
+- Padding interno amplio.
+- Fuente sans-serif para coherencia con todo el sitio.
+*/
+.detalle-contenido {
+  padding: 1.5rem;
+  font-family: sans-serif;
+}
+
+/* 
+📌 CABECERA DEL DETALLE
+- Flex para alinear título y controles de cantidad.
+*/
+.detalle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 
+📌 CONTROL DE CANTIDAD
+- Botones + y - con padding, bordes redondeados y sin bordes.
+*/
+.cantidad-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cantidad-control button {
+  background-color: #eee;
+  border: none;
+  padding: 0.3rem 0.8rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* 
+📌 RATING Y DESCRIPCIÓN
+- Colores neutros y márgenes suaves.
+*/
+.detalle-rating {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.descripcion {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* 
+📌 OPCIONES DE TALLA Y COLOR
+- Se presentan lado a lado.
+- Tallas como botones tipo píldora.
+- Colores como círculos de color.
+*/
+.detalle-opciones {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.tallas button, .color-option {
+  margin: 0.3rem;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.7rem;
+  cursor: pointer;
+}
+
+.tallas .activo, .color-option.activo {
+  border: 2px solid black;
+}
+
+.color-option {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+/* 
+📌 BOTÓN DE AGREGAR AL CARRITO
+- Botón grande, negro y de borde redondeado.
+- Letra blanca y tamaño amplio.
+*/
+.btn-carrito {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.formulario-perfil {
+  display: flex;              /* Utiliza flexbox para alinear elementos internos */
+  flex-direction: column;     /* Organiza los elementos en una columna vertical */
+  gap: 12px;                  /* Espacio de 12px entre cada elemento hijo */
+  padding: 1rem;              /* Relleno interno de 1rem alrededor del contenedor */
+}
+
+.formulario-perfil label {
+  font-weight: bold;          /* Texto en negrita para las etiquetas del formulario */
+  margin-top: 0.5rem;         /* Margen superior de 0.5rem para separar del elemento anterior */
+}
+
+.formulario-perfil input {
+  padding: 8px;               /* Relleno interno de 8px en todos los lados del input */
+  border-radius: 8px;         /* Bordes redondeados con 8px de radio */
+  border: 1px solid #ccc;     /* Borde gris claro de 1px */
+  font-size: 1rem;            /* Tamaño de fuente estándar (1rem) */
+}
+
+#guardar-perfil {
+  background-color: black;    /* Fondo negro para el botón */
+  color: white;               /* Texto blanco */
+  border: none;               /* Sin borde */
+  padding: 10px;              /* Relleno de 10px */
+  border-radius: 10px;        /* Bordes redondeados con 10px de radio */
+  margin-top: 1rem;           /* Margen superior de 1rem para separar del elemento anterior */
+  cursor: pointer;            /* Cursor tipo puntero al pasar el mouse */
+  font-size: 1rem;            /* Tamaño de fuente estándar */
+}
+
+
+/* 🛒 Estilos para carrito */
+#contenedor-carrito {
+  display: grid;              /* Usa CSS Grid para organizar los productos */
+  grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+  gap: 10px;                  /* Espacio de 10px entre los elementos */
+}
+
+
+/* Ventana flotante de verificación */
+#ventana-compra {
+  position: fixed;            /* Posicionamiento fijo en pantalla */
+  top: 0;                     /* Pegado al borde superior */
+  left: 0;                    /* Pegado al borde izquierdo */
+  width: 100%;                /* Ocupa todo el ancho de la pantalla */
+  height: 100%;               /* Ocupa todo el alto de la pantalla */
+  background: rgba(0, 0, 0, 0.6); /* Fondo negro semi-transparente */
+  display: none;              /* Oculto por defecto */
+  align-items: center;        /* Centra verticalmente el contenido */
+  justify-content: center;    /* Centra horizontalmente el contenido */
+  z-index: 2000;              /* Prioridad alta para que quede por encima del resto */
+}
+
+.ventana-contenido {
+  background: white;          /* Fondo blanco para la ventana */
+  border-radius: 1rem;        /* Bordes redondeados de 1rem */
+  max-width: 90%;             /* Máximo ancho del 90% del viewport */
+  width: 400px;               /* Ancho fijo de 400px */
+  padding: 1.5rem;            /* Relleno interno de 1.5rem */
+  position: relative;         /* Posición relativa para posicionar hijos */
+  text-align: left;           /* Alineación del texto a la izquierda */
+}
+
+.ventana-contenido h2 {
+  margin-bottom: 1rem;        /* Margen inferior de 1rem */
+  font-size: 1.2rem;          /* Tamaño de fuente 1.2rem */
+}
+
+#datos-perfil p {
+  margin-bottom: 0.5rem;      /* Espacio entre párrafos */
+  color: #333;                /* Texto gris oscuro */
+}
+
+.btn-finalizar {
+  background-color: green;    /* Fondo verde */
+  color: white;               /* Texto blanco */
+  width: 100%;                /* Ocupa todo el ancho disponible */
+  padding: 0.8rem;            /* Relleno de 0.8rem */
+  border: none;               /* Sin borde */
+  border-radius: 1rem;        /* Bordes redondeados de 1rem */
+  margin-top: 2.5rem;         /* Margen superior de 2.5rem para separarlo del contenido anterior */
+  font-size: 1rem;            /* Tamaño de fuente estándar */
+  cursor: pointer;            /* Cursor tipo puntero */
+}
+
+.ventana-cerrar {
+  position: absolute;         /* Posición absoluta dentro de la ventana */
+  top: 0.7rem;                /* 0.7rem desde el borde superior */
+  right: 1rem;                /* 1rem desde el borde derecho */
+  font-size: 1.3rem;          /* Tamaño de fuente grande */
+  cursor: pointer;            /* Cursor tipo puntero */
+}
+
+#mensaje-exito {
+  position: fixed;            /* Posición fija en pantalla */
+  top: 50%;                   /* Centrado verticalmente */
+  left: 50%;                  /* Centrado horizontalmente */
+  transform: translate(-50%, -50%); /* Ajuste exacto para centrar */
+  background: #4CAF50;        /* Fondo verde de éxito */
+  color: white;               /* Texto blanco */
+  padding: 1rem 2rem;         /* Relleno interno: 1rem arriba/abajo, 2rem izquierda/derecha */
+  border-radius: 1rem;        /* Bordes redondeados */
+  font-size: 1.2rem;          /* Tamaño de fuente grande */
+  display: none;              /* Oculto por defecto */
+  z-index: 3000;              /* Muy encima de todo */
+  box-shadow: 0 0 15px rgba(0,0,0,0.3); /* Sombra suave */
+}
+
+
+.img-producto {
+  width: 80px;                /* Ancho fijo de 80px */
+  height: 80px;               /* Alto fijo de 80px */
+  object-fit: cover;          /* Cubre el espacio sin deformarse */
+  border-radius: 10px;        /* Bordes redondeados */
+  margin-right: 10px;         /* Margen derecho para separación */
+}
+
+
+@media screen and (min-width: 768px) {
+  .producto {
+    width: 200px;                      /* Ancho fijo de 200px para cada tarjeta de producto */
+  }
+
+  .barra-superior {
+    height: 70px;                      /* Altura aumentada para pantallas grandes */
+  }
+
+  .barra-inferior {
+    display: none;                     /* Se oculta la barra inferior en pantallas grandes */
+  }
+
+  .busqueda {
+    max-width: 300px;                  /* Ancho máximo del input de búsqueda */
+    font-size: 1rem;                   /* Tamaño de fuente estándar */
+  }
+
+  .detalle {
+    padding: 2rem;                     /* Relleno interno más amplio */
+  }
+
+  .detalle-imagen {
+    height: 400px;                     /* Imagen de detalle más grande */
+  }
+
+  .detalle-nombre {
+    font-size: 2rem;                   /* Nombre del producto más grande */
+  }
+
+  .detalle-precio {
+    font-size: 1.8rem;                 /* Precio más grande */
+  }
+
+  .detalle-cantidad input {
+    font-size: 1.5rem;                 /* Campo de cantidad más grande */
+    width: 60px;                       /* Ancho fijo más amplio */
+  }
+
+  .detalle-info {
+    font-size: 1.2rem;                 /* Descripción y texto general más grande */
+  }
+
+  .opciones-talla button,
+  .opciones-color button {
+    padding: 0.8rem 1.2rem;            /* Botones de talla y color más grandes */
+    font-size: 1rem;                   /* Texto más grande en los botones */
+  }
+
+  .agregar-carrito {
+    font-size: 1.3rem;                 /* Texto del botón más grande */
+    padding: 1rem;                     /* Más espacio interno */
+  }
+
+  .ventana-contenido {
+    width: 500px;                      /* Ventana flotante más ancha */
+  }
+
+  .btn-finalizar {
+    font-size: 1.1rem;                 /* Botón de finalizar compra más grande */
+  }
+}

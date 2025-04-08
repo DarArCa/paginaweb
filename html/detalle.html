@@ -1,46 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Declaración del tipo de documento HTML -->
+<html lang="en"> <!-- Comienza el documento HTML con idioma inglés -->
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Detalle Producto</title>
-  <link rel="stylesheet" href="../css/estilos.css" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta charset="UTF-8" /> <!-- Define la codificación de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Escala responsive para móviles -->
+  <title>Detalle Producto</title> <!-- Título que aparece en la pestaña del navegador -->
+  <link rel="stylesheet" href="../css/estilos.css" /> <!-- Enlace al archivo de estilos CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Fuente de íconos de Google -->
 </head>
 <body>
 
   <!-- Imagen principal y botones -->
-  <div class="detalle-img-container">
-    <button class="btn-volver material-icons">arrow_back</button>
-    <img id="detalle-img" src="../img/ejemplo.jpg" alt="Producto" />
-    <button class="btn-fav material-icons">favorite_border</button>
+  <div class="detalle-img-container"> <!-- Contenedor principal de imagen del producto -->
+    <button class="btn-volver material-icons">arrow_back</button> <!-- Botón para volver -->
+    <img id="detalle-img" src="../img/ejemplo.jpg" alt="Producto" /> <!-- Imagen del producto -->
+    <button class="btn-fav material-icons">favorite_border</button> <!-- Botón de favoritos -->
   </div>
 
   <!-- Info del producto -->
-  <div class="detalle-contenido">
-    <div class="detalle-header">
-      <h2 class="titulo-producto">Light Dress Bless</h2>
-      <div class="cantidad-control">
-        <button class="menos">-</button>
-        <span class="cantidad">1</span>
-        <button class="mas">+</button>
+  <div class="detalle-contenido"> <!-- Contenedor del contenido del producto -->
+    <div class="detalle-header"> <!-- Encabezado con título y control de cantidad -->
+      <h2 class="titulo-producto">Light Dress Bless</h2> <!-- Nombre del producto -->
+      <div class="cantidad-control"> <!-- Controles de cantidad -->
+        <button class="menos">-</button> <!-- Botón para disminuir cantidad -->
+        <span class="cantidad">1</span> <!-- Cantidad actual -->
+        <button class="mas">+</button> <!-- Botón para aumentar cantidad -->
       </div>
     </div>
 
-    <div class="detalle-rating">
-      <span class="material-icons">star</span> 
-      <span>5.0</span> 
-      <a href="#">(7,932 reviews)</a>
+    <div class="detalle-rating"> <!-- Sección de calificación del producto -->
+      <span class="material-icons">star</span>  <!-- Ícono de estrella -->
+      <span>5.0</span>  <!-- Valor de calificación -->
+      <a href="#">(7,932 reviews)</a> <!-- Número de reseñas con enlace -->
     </div>
 
-    <p class="descripcion">
+    <p class="descripcion"> <!-- Descripción del producto -->
       Its simple and elegant shape makes it perfect for those of you who like minimalist clothes <b>Read More. . .</b>
     </p>
 
-    <div class="detalle-opciones">
+    <div class="detalle-opciones"> <!-- Opciones de selección de talla y color -->
       <div>
-        <p>Choose Size</p>
-        <div class="tallas">
+        <p>Choose Size</p> <!-- Etiqueta de talla -->
+        <div class="tallas"> <!-- Botones para seleccionar talla -->
           <button>S</button>
           <button class="activo">M</button>
           <button>L</button>
@@ -48,8 +48,8 @@
         </div>
       </div>
       <div>
-        <p>Color</p>
-        <div class="colores">
+        <p>Color</p> <!-- Etiqueta de color -->
+        <div class="colores"> <!-- Opciones de color -->
           <span class="color-option" style="background-color:#555;"></span>
           <span class="color-option activo" style="background-color:#ccc;"></span>
           <span class="color-option" style="background-color:#000;"></span>
@@ -57,12 +57,12 @@
       </div>
     </div>
 
-    <button class="btn-carrito">
+    <button class="btn-carrito"> <!-- Botón para añadir al carrito -->
       🛒 Add to Cart | <span class="precio-producto">$100.99</span> <del>$190.99</del>
     </button>
   </div>
 
   <!-- Scripts -->
-  <script src="/js/detalle.js"></script>
+  <script src="/js/detalle.js"></script> <!-- Enlace al archivo JavaScript del detalle del producto -->
 </body>
 </html>

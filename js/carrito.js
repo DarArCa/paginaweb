@@ -65,3 +65,7 @@ document.querySelector('.btn-finalizar').addEventListener('click', () => {
   localStorage.removeItem('carrito');
   document.getElementById('contenedor-carrito').innerHTML = '';
 });
+
+
+
+
